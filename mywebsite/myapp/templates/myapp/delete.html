@@ -1,0 +1,11 @@
+<form method = "POST" action = '' >
+
+    {%csrf_token%}
+
+    Do you really want to delete {{mobile.brand}} ?
+
+    <button type="button" onclick="window.location.href='{% url 'home' %}';">No</button>
+
+<button type = "submit" >Yes</button >
+
+</form>

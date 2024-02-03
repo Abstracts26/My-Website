@@ -1,0 +1,9 @@
+<form method= "POST" action= "">
+    {% csrf_token %}
+    Username: <input type= "text" name= "username" value= "{{ username }}" /><br />
+    
+    Password: <input type= "password" name= "password" value= "" /><br />
+
+    <button type= "submit">Login</button>
+
+</form>

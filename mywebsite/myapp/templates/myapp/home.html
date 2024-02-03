@@ -1,0 +1,35 @@
+{% extends "myapp/main.html" %}
+
+{% block content %}
+
+
+    <a href="{% url 'Create' %}">Create</a>
+
+
+    <br>
+
+<form method="GET" action="">
+   Search by brand name: {{form.form.brand}}
+    <input type="submit" value="Search">
+</form>
+
+<br> 
+{% for mobile in mobiles %}
+
+   
+   <a href="{% url 'read' mobile.id %}">{{mobile}}</a>
+   <a href="{% url 'update' mobile.id %}">update</a>
+    <a href="{% url 'delete' mobile.id %}">delete</a>
+    <br>
+
+{% endfor %}
+<br>
+<a href="{% url 'logout' %}">logout</a>
+
+{% endblock content %}
+
+
+
+```
+
+```
